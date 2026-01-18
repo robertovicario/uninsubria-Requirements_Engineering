@@ -1,52 +1,33 @@
-| <img src="docs/logo.svg" width="128"> |
+| <img src="docs/uninsubria.svg" width="128"> |
 | - |
 
-# [Course_Name], [BSc_MSc_PhD] Course @ [Your_University]
+# Requirements Engineering, MSc Course @ uninsubria
 
-This repository contains my personal notes for the [Course_Name] course at the [Your_University], part of the [BSc_MSc_PhD] in [Faculty_Name].
+This repository contains my project work for the Requirements Engineering course at the University of Insubria, part of the MSc in Computer Science.
 
 ## Overview
 
-You can download my personal notes using the link below. To create your own notes, simply fork this repository and start editing using markdown.
+You can easily download my project work below, remember to use it responsibly and cite it if you reference it.
 
-## Prerequisites
+## Project Work
 
-> [!IMPORTANT]
->
-> - Pandoc
-
-## Notes
-
-| <a href="https://raw.githubusercontent.com/<username>/<repo_name>/<branch>/dist/Notes.pdf"><img src="docs/cover.png" alt="cover" height="256"></a> |
+| <a href="https://raw.githubusercontent.com/robertovicario/uninsubria-Requirements_Engineering/main/dist/Project_Work.pdf"><img src="docs/cover.png" alt="cover" height="256"></a> |
 | - |
 
-## Instructions
+## Credits
 
-Usage:
-
-```sh
-bash cmd.sh {setup|notes}
-```
-
-### `setup`
-
-If you haven't built the project yet, you can do so by running:
-
-```sh
-bash cmd.sh setup
-```
-
-### `notes`
-
-The script will automatically generate the `content.pdf` file from the markdown files located in the `docs/md` directory and merge it with your `front.pdf` to create the final `Notes.pdf`:
-
-```sh
-bash cmd.sh notes
-```
-
-> [!IMPORTANT]
+> [!WARNING]
 >
-> Before running this command, ensure to upload your own `front.pdf` into the `dist` directory. You can even let `pandoc` generate a title page for you by updating the `titlepage` field in the `docs/md/__metadata__.yml` file, and removing the `front.pdf` reference from the `cmd.sh` script.
+> Please use this project responsibly, it was created by me for an exam session that I completed at _University of Insubria_. If you use or reference this project, please cite it as follows:
+>
+> ```bib
+> @misc{vicario2026requirementsengineering,
+>     author = {R. Vicario},
+>     title  = {uninsubria-Requirements_Engineering},
+>     year   = {2026},
+>     url    = {https://github.com/robertovicario/uninsubria-Requirements_Engineering}
+> }
+> ```
 
 ## License
 

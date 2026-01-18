@@ -7,11 +7,15 @@ setup() {
 }
 
 notes() {
-    printer "📚 Generating documentation"
+    printer "📚 Generating notes"
     mkdir -p dist
-    pandoc docs/md/*.md \
+    FILES=()
+    while IFS= read -r f; do
+        FILES+=("$f")
+    done < <(printf "%s\n" md/*.md | sort -V)
+    pandoc "${FILES[@]}" \
         -o dist/content.pdf \
-        --metadata-file=docs/md/__metadata__.yml \
+        --metadata-file=md/__metadata__.yml \
         --from=markdown \
         --template=pandoc-latex-template/template-multi-file/eisvogel.latex \
         --pdf-engine=xelatex \
@@ -21,6 +25,7 @@ notes() {
         dist/front.pdf \
         dist/content.pdf \
         dist/Notes.pdf
+    open dist
     handler
 }
 
