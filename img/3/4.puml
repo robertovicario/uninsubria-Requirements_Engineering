@@ -1,0 +1,16 @@
+@startuml
+
+skinparam rectangle {
+    roundCorner 25
+}
+
+rectangle "Local Administration" as LA <<Biddable>> #Business
+rectangle "Urban Environment" as UE <<Given>> #Technology
+rectangle "AI-based Urban Green Areas\nManagement System" as MS <<Machine>> #Application
+
+UE --> MS : "environment\nstate"
+MS --> UE : "interventions"
+LA --> MS : "planning / decisions"
+MS --> LA : "priorities / reports"
+
+@enduml

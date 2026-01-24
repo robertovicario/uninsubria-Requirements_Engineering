@@ -1,0 +1,15 @@
+@startuml
+
+skinparam rectangle {
+    roundCorner 25
+}
+
+rectangle "Citizen" as C <<Biddable>> #Business
+rectangle "AI-based Urban Green Areas\nManagement System" as MS <<Machine>> #Application
+
+C --> MS : "submit\nreports"
+C --> MS : "request\ninformation"
+MS --> C : "area\nstatus"
+MS --> C : "feedback\non reports"
+
+@enduml

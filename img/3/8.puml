@@ -1,0 +1,39 @@
+@startuml
+
+left to right direction
+
+actor Citizen as C
+actor "Local\nAdministration" as LA
+actor "Maintenance\nStaff" as MS
+
+rectangle "AI-based Urban Green Areas\nManagement System" {
+    usecase "View Green Area Status" as UC1
+    usecase "Report Issue" as UC2
+    usecase "Receive Feedback" as UC3
+
+    usecase "View Analytics & Risks" as UC4
+    usecase "Plan Maintenance" as UC5
+    usecase "Issue Maintenance Decision" as UC6
+
+    usecase "Execute Intervention" as UC7
+    usecase "Update Intervention Status" as UC8
+
+    usecase "Collect Environmental Data" as UC9
+    usecase "AI-based Risk Analysis" as UC10
+    usecase "Send Notifications" as UC11
+}
+
+C --> UC1
+C --> UC2
+C --> UC3
+LA --> UC4
+LA --> UC5
+LA --> UC6
+MS --> UC7
+MS --> UC8
+UC9 --> UC10
+UC10 --> UC4
+UC6 --> UC11
+UC8 --> UC11
+
+@enduml

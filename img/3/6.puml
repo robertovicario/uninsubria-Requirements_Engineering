@@ -1,0 +1,13 @@
+@startuml
+
+skinparam rectangle {
+    roundCorner 25
+}
+
+rectangle "Environmental Data\nRepository" as DR <<Given>> #Technology
+rectangle "AI-based Urban Green Areas\nManagement System" as MS <<Machine>> #Application
+
+DR --> MS : "real-time\ndata"
+MS --> DR : "insights / predictions"
+
+@enduml

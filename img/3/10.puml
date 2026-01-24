@@ -1,0 +1,24 @@
+@startuml
+
+start
+
+:Collect environmental data;
+:Receive citizen reports;
+:Store data and reports;
+:AI-based analysis;
+
+if (Risk detected?) then (yes)
+  :Generate alerts;
+  :Notify Local Administration;
+else (no)
+  :Update monitoring status;
+endif
+
+:Local Administration reviews data;
+:Plan maintenance intervention;
+:Notify stakeholders;
+:Update intervention status;
+
+stop
+
+@enduml

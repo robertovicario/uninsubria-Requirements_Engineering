@@ -1,0 +1,19 @@
+@startuml
+
+actor Citizen as C
+actor "Local\nAdministration" as LA
+control "Management\nSystem" as SYS
+control "AI Model" as AI
+boundary "Environmental\nData" as DR
+
+C -> SYS : submit report
+SYS -> DR : store report
+SYS -> AI : analyse report
+AI -> DR : request data
+DR --> AI : historical data
+AI --> SYS : risk assessment
+SYS -> LA : notify risk
+LA -> SYS : issue decision
+SYS -> C : send feedback
+
+@enduml

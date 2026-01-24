@@ -1,0 +1,15 @@
+@startuml
+
+skinparam rectangle {
+    roundCorner 25
+}
+
+rectangle "External Data Sources" as EDS <<Given>> #Technology
+rectangle "Urban Environment" as UE <<Given>> #Technology
+rectangle "AI-based Urban Green Areas\nManagement System" as MS <<Machine>> #Application
+
+EDS --> MS : "sensor\ndata"
+UE --> MS : "observed\nconditions"
+MS --> UE : "monitored\nrepresentation"
+
+@enduml
