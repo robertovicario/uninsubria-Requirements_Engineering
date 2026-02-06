@@ -24,7 +24,7 @@ notes() {
     pdfunite \
         dist/front.pdf \
         dist/content.pdf \
-        dist/Project-Work.pdf
+        dist/Project_Work.pdf
     open dist/
     handler
 }
